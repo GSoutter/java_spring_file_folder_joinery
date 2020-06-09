@@ -1,11 +1,27 @@
 package com.codeclan.example.java_files_folders_joinery.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "files")
 public class File {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private String name;
+
+    @Column
     private String extension;
+
+    @Column
     private Long size;
+
+
+    @ManyToOne
+    @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 
     public File(String name, String extension, Long size, Folder folder) {

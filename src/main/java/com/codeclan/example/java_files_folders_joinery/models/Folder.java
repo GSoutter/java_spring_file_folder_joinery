@@ -19,7 +19,7 @@ public class Folder {
     private String name;
 
     @JsonIgnoreProperties("files")
-    @OneToMany(mappedBy = "")
+    @OneToMany(mappedBy = "file", fetch = FetchType.LAZY)
     private List<File> files;
 
     @ManyToOne
