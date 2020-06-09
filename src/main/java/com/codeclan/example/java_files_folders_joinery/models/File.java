@@ -31,6 +31,12 @@ public class File {
         this.folder = folder;
     }
 
+    public File() {
+    }
+
+    public void setSize(long size) {
+        this.size = size;
+    }
 
     public Long getId() {
         return id;
@@ -58,10 +64,6 @@ public class File {
 
     public Long getSize() {
         return size;
-    }
-
-    public void setSize(Long size) {
-        this.size = size;
     }
 
     public Folder getFolder() {
