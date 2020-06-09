@@ -18,8 +18,8 @@ public class Folder {
     @Column
     private String name;
 
-    @JsonIgnoreProperties("files")
-    @OneToMany(mappedBy = "file", fetch = FetchType.LAZY)
+    @JsonIgnoreProperties("folder")
+    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY )
     private List<File> files;
 
     @ManyToOne

@@ -1,4 +1,4 @@
-package repository;
+package com.codeclan.example.java_files_folders_joinery.repository;
 
 import com.codeclan.example.java_files_folders_joinery.models.Folder;
 import org.springframework.data.jpa.repository.JpaRepository;

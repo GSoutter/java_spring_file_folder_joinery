@@ -17,14 +17,14 @@ public class File {
     private String extension;
 
     @Column
-    private Long size;
+    private long size;
 
 
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 
-    public File(String name, String extension, Long size, Folder folder) {
+    public File(String name, String extension, long size, Folder folder) {
         this.name = name;
         this.extension = extension;
         this.size = size;
